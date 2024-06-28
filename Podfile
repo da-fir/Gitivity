@@ -6,7 +6,7 @@ target 'Gitivity' do
   use_frameworks!
 
   # Pods for Gitivity
-  pod 'SnapKit'
+  pod 'SDWebImageSwiftUI'
 
   target 'GitivityTests' do
     inherit! :search_paths
