@@ -14,6 +14,10 @@
 		0C109AD52C2E6EC3009FDBA8 /* GitivityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C109AD42C2E6EC3009FDBA8 /* GitivityTests.swift */; };
 		0C109ADF2C2E6EC3009FDBA8 /* GitivityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C109ADE2C2E6EC3009FDBA8 /* GitivityUITests.swift */; };
 		0C109AE12C2E6EC3009FDBA8 /* GitivityUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C109AE02C2E6EC3009FDBA8 /* GitivityUITestsLaunchTests.swift */; };
+		0C90348F2C2F68A500B679B7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90348A2C2F68A500B679B7 /* NetworkManager.swift */; };
+		0C9034902C2F68A500B679B7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90348B2C2F68A500B679B7 /* UserModel.swift */; };
+		0C9034912C2F68A500B679B7 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90348D2C2F68A500B679B7 /* UserListViewModel.swift */; };
+		0C9034922C2F68A500B679B7 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90348E2C2F68A500B679B7 /* UserListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		0C109ADA2C2E6EC3009FDBA8 /* GitivityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitivityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C109ADE2C2E6EC3009FDBA8 /* GitivityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitivityUITests.swift; sourceTree = "<group>"; };
 		0C109AE02C2E6EC3009FDBA8 /* GitivityUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitivityUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0C90348A2C2F68A500B679B7 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0C90348B2C2F68A500B679B7 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		0C90348D2C2F68A500B679B7 /* UserListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		0C90348E2C2F68A500B679B7 /* UserListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 				0C109AD32C2E6EC3009FDBA8 /* GitivityTests */,
 				0C109ADD2C2E6EC3009FDBA8 /* GitivityUITests */,
 				0C109AC12C2E6EC1009FDBA8 /* Products */,
+				746DC320AA9F9FE447CDFF55 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +106,8 @@
 				0C109AC32C2E6EC1009FDBA8 /* GitivityApp.swift */,
 				0C109AC52C2E6EC1009FDBA8 /* ContentView.swift */,
 				0C109AC72C2E6EC3009FDBA8 /* Assets.xcassets */,
+				0C9034882C2F68A500B679B7 /* Networking */,
+				0C90348C2C2F68A500B679B7 /* UserList */,
 				0C109AC92C2E6EC3009FDBA8 /* Preview Content */,
 			);
 			path = Gitivity;
@@ -125,6 +136,39 @@
 				0C109AE02C2E6EC3009FDBA8 /* GitivityUITestsLaunchTests.swift */,
 			);
 			path = GitivityUITests;
+			sourceTree = "<group>";
+		};
+		0C9034882C2F68A500B679B7 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0C9034892C2F68A500B679B7 /* Manager */,
+				0C90348B2C2F68A500B679B7 /* UserModel.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0C9034892C2F68A500B679B7 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0C90348A2C2F68A500B679B7 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0C90348C2C2F68A500B679B7 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				0C90348D2C2F68A500B679B7 /* UserListViewModel.swift */,
+				0C90348E2C2F68A500B679B7 /* UserListView.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		746DC320AA9F9FE447CDFF55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C90348F2C2F68A500B679B7 /* NetworkManager.swift in Sources */,
+				0C9034922C2F68A500B679B7 /* UserListView.swift in Sources */,
 				0C109AC62C2E6EC1009FDBA8 /* ContentView.swift in Sources */,
+				0C9034902C2F68A500B679B7 /* UserModel.swift in Sources */,
 				0C109AC42C2E6EC1009FDBA8 /* GitivityApp.swift in Sources */,
+				0C9034912C2F68A500B679B7 /* UserListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

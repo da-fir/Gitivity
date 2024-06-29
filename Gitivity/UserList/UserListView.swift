@@ -4,7 +4,6 @@
 //
 //  Created by Darul Firmansyah on 28/06/24.
 //
-
 import SwiftUI
 
 struct UserListView: View {
@@ -12,19 +11,24 @@ struct UserListView: View {
     var viewModel: UserListViewModel
     
     var body: some View {
-        switch viewModel.state {
-        case .loading:
-            ProgressView {
-                Text("Loading ...")
-                    .foregroundColor(.black)
-                    .bold()
+        NavigationStack {
+            Form {
+                switch viewModel.state {
+                case .loading:
+                    ProgressView {
+                        Text("Loading ...")
+                            .foregroundColor(.black)
+                            .bold()
+                    }
+                case .empty:
+                    Text("Page is Empty ...")
+                        .foregroundColor(.black)
+                        .bold()
+                default:
+                    contentView
+                }
             }
-        case .empty:
-            Text("Page is Empty ...")
-                .foregroundColor(.black)
-                .bold()
-        default:
-            contentView
+            .navigationTitle("SwiftUI")
         }
     }
     
@@ -73,26 +77,24 @@ struct ListView: View {
         let user: UserModel
         
         var body: some View {
-            HStack(alignment: .center) {
-                Image
-                Text(user.login).font(.title)
+            HStack{
+                AsyncImage(
+                    url: URL(string: user.avatar_url ?? ""),
+                    content: { image in
+                        image.resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 100, height: 100)
+                    },
+                    placeholder: {
+                        ProgressView()
+                            .frame(width: 100, height: 100)
+                    })
+                .fixedSize()
+                
+                Text(user.login)
+                    .font(.title)
+                Spacer()
             }
         }
-    }
-}
-
-
-struct AsyncWebImageView: View {
-    private var url: URL
-    private var placeHolder: Image
-    init(url: URL, placeHolder: Image) {
-        self.url = url
-        self.placeHolder = placeHolder
-    }
-    var body: some View {
-        placeHolder
-            .resizable()
-            .onAppear { }
-            .onDisappear { }
     }
 }

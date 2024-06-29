@@ -34,14 +34,14 @@ class UserListViewModel : ObservableObject {
         getUsers(parameters: nil)
     }
     
-
+    
     //MARK: - PAGINATION
     func loadMoreContent() {
         guard footerState == .loading
         else {
             return
         }
-            getUsers(parameters: nextRequest)
+        getUsers(parameters: nextRequest)
     }
     
     //MARK: - API CALL
@@ -56,22 +56,22 @@ class UserListViewModel : ObservableObject {
                 self?.managePagination(allResponseHeaders: allResponseHeaders)
             }
         })
-                response
-                    .receive(on: RunLoop.main)
-                    .sink { completion in
-                        switch completion {
-                            case .finished:
-                                break
-                            case .failure(let error):
-                                print("Error: \(error)")
-                                self.state = .error
-                        }
-                    }
-                    receiveValue: { response in
-                        self.users.append(contentsOf: response)
-                        self.state = .success
-                    }
-                    .store(in: &cancellables)
+        response
+            .receive(on: RunLoop.main)
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    print("Error: \(error)")
+                    self.state = .error
+                }
+            }
+        receiveValue: { response in
+            self.users.append(contentsOf: response)
+            self.state = .success
+        }
+        .store(in: &cancellables)
     }
     
     private func managePagination(allResponseHeaders: [AnyHashable: Any]) {
