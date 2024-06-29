@@ -27,9 +27,22 @@ struct UserModel: Codable, Hashable, Identifiable {
     let received_events_url : String?
     let type : String?
     let site_admin : Bool?
+    let name : String?
+    let company : String?
+    let blog : String?
+    let location : String?
+    let email : String?
+    let hireable : Bool?
+    let bio : String?
+    let twitter_username : String?
+    let public_repos : Int?
+    let public_gists : Int?
+    let followers : Int?
+    let following : Int?
+    let created_at : String?
+    let updated_at : String?
 
     enum CodingKeys: String, CodingKey {
-
         case login = "login"
         case id = "id"
         case node_id = "node_id"
@@ -48,5 +61,19 @@ struct UserModel: Codable, Hashable, Identifiable {
         case received_events_url = "received_events_url"
         case type = "type"
         case site_admin = "site_admin"
+        case name = "name"
+        case company = "company"
+        case blog = "blog"
+        case location = "location"
+        case email = "email"
+        case hireable = "hireable"
+        case bio = "bio"
+        case twitter_username = "twitter_username"
+        case public_repos = "public_repos"
+        case public_gists = "public_gists"
+        case followers = "followers"
+        case following = "following"
+        case created_at = "created_at"
+        case updated_at = "updated_at"
     }
 }

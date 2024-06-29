@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0C109AC42C2E6EC1009FDBA8 /* GitivityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C109AC32C2E6EC1009FDBA8 /* GitivityApp.swift */; };
-		0C109AC62C2E6EC1009FDBA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C109AC52C2E6EC1009FDBA8 /* ContentView.swift */; };
 		0C109AC82C2E6EC3009FDBA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C109AC72C2E6EC3009FDBA8 /* Assets.xcassets */; };
-		0C109ACB2C2E6EC3009FDBA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C109ACA2C2E6EC3009FDBA8 /* Preview Assets.xcassets */; };
 		0C109AD52C2E6EC3009FDBA8 /* GitivityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C109AD42C2E6EC3009FDBA8 /* GitivityTests.swift */; };
 		0C109ADF2C2E6EC3009FDBA8 /* GitivityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C109ADE2C2E6EC3009FDBA8 /* GitivityUITests.swift */; };
 		0C109AE12C2E6EC3009FDBA8 /* GitivityUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C109AE02C2E6EC3009FDBA8 /* GitivityUITestsLaunchTests.swift */; };
+		0C75365C2C303E2E00DB22C9 /* UserRepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C75365B2C303E2E00DB22C9 /* UserRepositoriesView.swift */; };
+		0C75365E2C303E4700DB22C9 /* UserRepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C75365D2C303E4700DB22C9 /* UserRepositoriesViewModel.swift */; };
+		0C7536602C303F0100DB22C9 /* Contracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C75365F2C303F0100DB22C9 /* Contracts.swift */; };
+		0C7536622C30410600DB22C9 /* UserDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7536612C30410600DB22C9 /* UserDetailHeaderView.swift */; };
+		0C7536642C30437100DB22C9 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7536632C30437100DB22C9 /* UserCell.swift */; };
+		0C7536662C304E4B00DB22C9 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7536652C304E4B00DB22C9 /* RepositoryModel.swift */; };
+		0C7536682C3051BF00DB22C9 /* RepositoriesWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7536672C3051BF00DB22C9 /* RepositoriesWebView.swift */; };
+		0C75366A2C3051F200DB22C9 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7536692C3051F200DB22C9 /* RepositoryCell.swift */; };
 		0C90348F2C2F68A500B679B7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90348A2C2F68A500B679B7 /* NetworkManager.swift */; };
 		0C9034902C2F68A500B679B7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90348B2C2F68A500B679B7 /* UserModel.swift */; };
 		0C9034912C2F68A500B679B7 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90348D2C2F68A500B679B7 /* UserListViewModel.swift */; };
@@ -40,14 +46,20 @@
 /* Begin PBXFileReference section */
 		0C109AC02C2E6EC1009FDBA8 /* Gitivity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitivity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C109AC32C2E6EC1009FDBA8 /* GitivityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitivityApp.swift; sourceTree = "<group>"; };
-		0C109AC52C2E6EC1009FDBA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C109AC72C2E6EC3009FDBA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0C109ACA2C2E6EC3009FDBA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C109AD02C2E6EC3009FDBA8 /* GitivityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitivityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C109AD42C2E6EC3009FDBA8 /* GitivityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitivityTests.swift; sourceTree = "<group>"; };
 		0C109ADA2C2E6EC3009FDBA8 /* GitivityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitivityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C109ADE2C2E6EC3009FDBA8 /* GitivityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitivityUITests.swift; sourceTree = "<group>"; };
 		0C109AE02C2E6EC3009FDBA8 /* GitivityUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitivityUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0C75365B2C303E2E00DB22C9 /* UserRepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoriesView.swift; sourceTree = "<group>"; };
+		0C75365D2C303E4700DB22C9 /* UserRepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoriesViewModel.swift; sourceTree = "<group>"; };
+		0C75365F2C303F0100DB22C9 /* Contracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contracts.swift; sourceTree = "<group>"; };
+		0C7536612C30410600DB22C9 /* UserDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailHeaderView.swift; sourceTree = "<group>"; };
+		0C7536632C30437100DB22C9 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		0C7536652C304E4B00DB22C9 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		0C7536672C3051BF00DB22C9 /* RepositoriesWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesWebView.swift; sourceTree = "<group>"; };
+		0C7536692C3051F200DB22C9 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		0C90348A2C2F68A500B679B7 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0C90348B2C2F68A500B679B7 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		0C90348D2C2F68A500B679B7 /* UserListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
@@ -86,7 +98,6 @@
 				0C109AD32C2E6EC3009FDBA8 /* GitivityTests */,
 				0C109ADD2C2E6EC3009FDBA8 /* GitivityUITests */,
 				0C109AC12C2E6EC1009FDBA8 /* Products */,
-				746DC320AA9F9FE447CDFF55 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,21 +115,13 @@
 			isa = PBXGroup;
 			children = (
 				0C109AC32C2E6EC1009FDBA8 /* GitivityApp.swift */,
-				0C109AC52C2E6EC1009FDBA8 /* ContentView.swift */,
-				0C109AC72C2E6EC3009FDBA8 /* Assets.xcassets */,
+				0C75365F2C303F0100DB22C9 /* Contracts.swift */,
 				0C9034882C2F68A500B679B7 /* Networking */,
+				0C75365A2C303E1400DB22C9 /* UserRepositories */,
 				0C90348C2C2F68A500B679B7 /* UserList */,
-				0C109AC92C2E6EC3009FDBA8 /* Preview Content */,
+				0C109AC72C2E6EC3009FDBA8 /* Assets.xcassets */,
 			);
 			path = Gitivity;
-			sourceTree = "<group>";
-		};
-		0C109AC92C2E6EC3009FDBA8 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				0C109ACA2C2E6EC3009FDBA8 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		0C109AD32C2E6EC3009FDBA8 /* GitivityTests */ = {
@@ -138,11 +141,24 @@
 			path = GitivityUITests;
 			sourceTree = "<group>";
 		};
+		0C75365A2C303E1400DB22C9 /* UserRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				0C75365B2C303E2E00DB22C9 /* UserRepositoriesView.swift */,
+				0C75365D2C303E4700DB22C9 /* UserRepositoriesViewModel.swift */,
+				0C7536612C30410600DB22C9 /* UserDetailHeaderView.swift */,
+				0C7536672C3051BF00DB22C9 /* RepositoriesWebView.swift */,
+				0C7536692C3051F200DB22C9 /* RepositoryCell.swift */,
+			);
+			path = UserRepositories;
+			sourceTree = "<group>";
+		};
 		0C9034882C2F68A500B679B7 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				0C9034892C2F68A500B679B7 /* Manager */,
 				0C90348B2C2F68A500B679B7 /* UserModel.swift */,
+				0C7536652C304E4B00DB22C9 /* RepositoryModel.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -160,15 +176,9 @@
 			children = (
 				0C90348D2C2F68A500B679B7 /* UserListViewModel.swift */,
 				0C90348E2C2F68A500B679B7 /* UserListView.swift */,
+				0C7536632C30437100DB22C9 /* UserCell.swift */,
 			);
 			path = UserList;
-			sourceTree = "<group>";
-		};
-		746DC320AA9F9FE447CDFF55 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +285,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C109ACB2C2E6EC3009FDBA8 /* Preview Assets.xcassets in Resources */,
 				0C109AC82C2E6EC3009FDBA8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,9 +312,16 @@
 			files = (
 				0C90348F2C2F68A500B679B7 /* NetworkManager.swift in Sources */,
 				0C9034922C2F68A500B679B7 /* UserListView.swift in Sources */,
-				0C109AC62C2E6EC1009FDBA8 /* ContentView.swift in Sources */,
+				0C7536602C303F0100DB22C9 /* Contracts.swift in Sources */,
+				0C75365C2C303E2E00DB22C9 /* UserRepositoriesView.swift in Sources */,
+				0C7536662C304E4B00DB22C9 /* RepositoryModel.swift in Sources */,
 				0C9034902C2F68A500B679B7 /* UserModel.swift in Sources */,
+				0C75365E2C303E4700DB22C9 /* UserRepositoriesViewModel.swift in Sources */,
+				0C7536622C30410600DB22C9 /* UserDetailHeaderView.swift in Sources */,
+				0C75366A2C3051F200DB22C9 /* RepositoryCell.swift in Sources */,
 				0C109AC42C2E6EC1009FDBA8 /* GitivityApp.swift in Sources */,
+				0C7536682C3051BF00DB22C9 /* RepositoriesWebView.swift in Sources */,
+				0C7536642C30437100DB22C9 /* UserCell.swift in Sources */,
 				0C9034912C2F68A500B679B7 /* UserListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,7 +485,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Gitivity/Preview Content\"";
 				DEVELOPMENT_TEAM = 77R7XWH9QH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -498,7 +513,6 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Gitivity/Preview Content\"";
 				DEVELOPMENT_TEAM = 77R7XWH9QH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

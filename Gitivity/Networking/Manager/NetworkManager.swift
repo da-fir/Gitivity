@@ -23,17 +23,23 @@ enum HttpMethod: String {
 
 enum Endpoint {
     case users
+    case user(String)
+    case repositories(String)
     
     var path: String {
         switch self {
         case .users:
             return "/users"
+        case let .user(username):
+            return "/users/" + username
+        case let .repositories(username):
+            return "/users/" + username + "/repos"
         }
     }
     
     var httpMethod: HttpMethod {
         switch self {
-        case .users:
+        default:
             return .get
         }
     }
@@ -81,13 +87,10 @@ class NetworkManager: NetworkManagerProtocol {
         for (key, value) in allHeaders {
             urlRequest.setValue(value, forHTTPHeaderField: key)
         }
-        print("REQUEST==", url)
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .tryMap { (data, response) -> (Data) in
                 if let httpResponse = response as? HTTPURLResponse,
                    (200..<300).contains(httpResponse.statusCode) {
-                    print(String(decoding: data, as: UTF8.self))
-                    print(httpResponse.allHeaderFields)
                     headerInterceptor?(httpResponse.allHeaderFields)
                     return data
                 } else {

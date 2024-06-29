@@ -12,28 +12,25 @@ struct UserListView: View {
     
     var body: some View {
         NavigationStack {
-            Form {
-                switch viewModel.state {
-                case .loading:
-                    ProgressView {
-                        Text("Loading ...")
-                            .foregroundColor(.black)
-                            .bold()
-                    }
-                case .empty:
-                    Text("Page is Empty ...")
+            switch viewModel.state {
+            case .loading:
+                ProgressView {
+                    Text("Loading ...")
                         .foregroundColor(.black)
                         .bold()
-                default:
-                    contentView
                 }
+            case .empty:
+                Text("Page is Empty ...")
+                    .foregroundColor(.black)
+                    .bold()
+            default:
+                contentView
             }
-            .navigationTitle("SwiftUI")
         }
     }
     
     private var contentView: some View {
-        ListView(
+        UserListContentView(
             users: viewModel.users,
             isLoading: viewModel.footerState == .loading,
             onScrolledAtBottom: viewModel.loadMoreContent
@@ -41,7 +38,7 @@ struct UserListView: View {
     }
 }
 
-struct ListView: View {
+struct UserListContentView: View {
     let users: [UserModel]
     let isLoading: Bool
     let onScrolledAtBottom: () -> Void
@@ -53,13 +50,16 @@ struct ListView: View {
                 loadingIndicator
             }
         }
+        .navigationTitle("Github Users")
     }
     
     private var reposList: some View {
         ForEach(users) { user in
-            UserCell(user: user).onAppear {
-                if self.users.last == user {
-                    self.onScrolledAtBottom()
+            NavigationLink(destination: UserRepositoriesView(viewModel: UserRepositoriesViewModel(user: user))) {
+                UserCell(user: user).onAppear {
+                    if self.users.last == user {
+                        self.onScrolledAtBottom()
+                    }
                 }
             }
         }
@@ -70,31 +70,6 @@ struct ListView: View {
             Text("Loading Next Page ...")
                 .foregroundColor(.black)
                 .bold()
-        }
-    }
-    
-    struct UserCell: View {
-        let user: UserModel
-        
-        var body: some View {
-            HStack{
-                AsyncImage(
-                    url: URL(string: user.avatar_url ?? ""),
-                    content: { image in
-                        image.resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 100, height: 100)
-                    },
-                    placeholder: {
-                        ProgressView()
-                            .frame(width: 100, height: 100)
-                    })
-                .fixedSize()
-                
-                Text(user.login)
-                    .font(.title)
-                Spacer()
-            }
         }
     }
 }
