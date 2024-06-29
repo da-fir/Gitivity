@@ -20,6 +20,8 @@
 		0C7536662C304E4B00DB22C9 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7536652C304E4B00DB22C9 /* RepositoryModel.swift */; };
 		0C7536682C3051BF00DB22C9 /* RepositoriesWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7536672C3051BF00DB22C9 /* RepositoriesWebView.swift */; };
 		0C75366A2C3051F200DB22C9 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7536692C3051F200DB22C9 /* RepositoryCell.swift */; };
+		0C75366D2C30641400DB22C9 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C75366C2C30641400DB22C9 /* WebViewModel.swift */; };
+		0C75366F2C3064DA00DB22C9 /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C75366E2C3064DA00DB22C9 /* WebViewContainer.swift */; };
 		0C90348F2C2F68A500B679B7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90348A2C2F68A500B679B7 /* NetworkManager.swift */; };
 		0C9034902C2F68A500B679B7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90348B2C2F68A500B679B7 /* UserModel.swift */; };
 		0C9034912C2F68A500B679B7 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90348D2C2F68A500B679B7 /* UserListViewModel.swift */; };
@@ -60,6 +62,8 @@
 		0C7536652C304E4B00DB22C9 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 		0C7536672C3051BF00DB22C9 /* RepositoriesWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesWebView.swift; sourceTree = "<group>"; };
 		0C7536692C3051F200DB22C9 /* RepositoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		0C75366C2C30641400DB22C9 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		0C75366E2C3064DA00DB22C9 /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
 		0C90348A2C2F68A500B679B7 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0C90348B2C2F68A500B679B7 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		0C90348D2C2F68A500B679B7 /* UserListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		0C109AC22C2E6EC1009FDBA8 /* Gitivity */ = {
 			isa = PBXGroup;
 			children = (
+				0C75366B2C30640000DB22C9 /* WebView */,
 				0C109AC32C2E6EC1009FDBA8 /* GitivityApp.swift */,
 				0C75365F2C303F0100DB22C9 /* Contracts.swift */,
 				0C9034882C2F68A500B679B7 /* Networking */,
@@ -151,6 +156,15 @@
 				0C7536692C3051F200DB22C9 /* RepositoryCell.swift */,
 			);
 			path = UserRepositories;
+			sourceTree = "<group>";
+		};
+		0C75366B2C30640000DB22C9 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				0C75366C2C30641400DB22C9 /* WebViewModel.swift */,
+				0C75366E2C3064DA00DB22C9 /* WebViewContainer.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		0C9034882C2F68A500B679B7 /* Networking */ = {
@@ -316,6 +330,7 @@
 				0C75365C2C303E2E00DB22C9 /* UserRepositoriesView.swift in Sources */,
 				0C7536662C304E4B00DB22C9 /* RepositoryModel.swift in Sources */,
 				0C9034902C2F68A500B679B7 /* UserModel.swift in Sources */,
+				0C75366F2C3064DA00DB22C9 /* WebViewContainer.swift in Sources */,
 				0C75365E2C303E4700DB22C9 /* UserRepositoriesViewModel.swift in Sources */,
 				0C7536622C30410600DB22C9 /* UserDetailHeaderView.swift in Sources */,
 				0C75366A2C3051F200DB22C9 /* RepositoryCell.swift in Sources */,
@@ -323,6 +338,7 @@
 				0C7536682C3051BF00DB22C9 /* RepositoriesWebView.swift in Sources */,
 				0C7536642C30437100DB22C9 /* UserCell.swift in Sources */,
 				0C9034912C2F68A500B679B7 /* UserListViewModel.swift in Sources */,
+				0C75366D2C30641400DB22C9 /* WebViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

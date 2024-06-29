@@ -55,7 +55,7 @@ struct UserRepositoriesView: View {
         
         var body: some View {
             ForEach(repos) { repo in
-                NavigationLink(destination: RepositoriesWebView()) {
+                NavigationLink(destination: RepositoriesWebView(repo: repo)) {
                     RepositoryCell(repo: repo).onAppear {
                         if self.repos.last == repo {
                             self.onScrolledAtBottom()

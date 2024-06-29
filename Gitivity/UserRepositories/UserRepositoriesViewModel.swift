@@ -48,12 +48,6 @@ class UserRepositoriesViewModel : ObservableObject {
     }
     
     func getRepositories(parameters: [String: String]?) {
-        if let parameters {
-            print("KODOK PAGINATION", parameters)
-        }
-        else {
-            print("KODOK PAGINATION 0")
-        }
         let response: AnyPublisher<[RepositoryModel], APIError> = networkService
             .request(
                 .repositories(user.login),
@@ -72,14 +66,11 @@ class UserRepositoriesViewModel : ObservableObject {
                 case .finished:
                     break
                 case .failure(let error):
-                    print("Error: \(error)")
                     self?.state = .error
                 }
             }
             receiveValue: { [weak self] response in
-                print("KODOK Repos", response.map({ $0.id
-                }))
-                self?.repos.append(contentsOf: response)
+                self?.repos.append(contentsOf: response.filter({ !($0.fork ?? true) }))
                 self?.state = .success
             }
             .store(in: &cancellables)

@@ -8,7 +8,17 @@
 import SwiftUI
 
 struct RepositoriesWebView: View {
+    private let repo: RepositoryModel
+    private let viewModel: WebViewModel
+    
+    init(repo: RepositoryModel) {
+        self.repo = repo
+        self.viewModel = WebViewModel(url: repo.html_url ?? "")
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        WebViewContainer(viewModel: viewModel)
+              .ignoresSafeArea()
+              .navigationTitle("Content of \(repo.name ?? "")")
     }
 }

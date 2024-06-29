@@ -51,7 +51,6 @@ class UserListViewModel : ObservableObject {
                 case .finished:
                     break
                 case .failure(let error):
-                    print("Error: \(error)")
                     self?.state = .error
                 }
             }
