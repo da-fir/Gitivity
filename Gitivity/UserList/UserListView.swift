@@ -23,6 +23,10 @@ struct UserListView: View {
                 Text("Page is Empty ...")
                     .foregroundColor(.black)
                     .bold()
+            case .error:
+                Text("Page is Error, Token Might not valid")
+                    .foregroundColor(.black)
+                    .bold()
             default:
                 contentView
             }
